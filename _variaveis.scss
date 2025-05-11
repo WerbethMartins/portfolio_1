@@ -1,4 +1,11 @@
-$display_flex: flex; // Display flex
+// Váriaveis para display flex 
+$display_flex: flex;
+$alingItems: center;
+$justify_content_center: center;
+
+// Váriaveis gerais
 $shadowBox: 1px 1px 3px rgb(0, 0, 0, 0.7); // Box shadow
-$borderBlack: 1px solid #000;
-$borderWhite: 1px solid #fff;
+$borderBlack: 1px solid #000; // Borda preta
+$borderWhite: 1px solid #fff; // Borda branca
+
+

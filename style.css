@@ -113,15 +113,15 @@
   margin: 3px;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.description_user .information_container .section_main_buttons .main_button :hover {
+  transform: scale(1.1);
 }
 .description_user .information_container .section_main_buttons .contact_button {
   color: #fff;
   border: 1px solid #fff;
   background-color: #b52323;
-  transition: all 0.3s ease;
-}
-.description_user .information_container .section_main_buttons .contact:hover {
-  transform: scale(1.1);
 }
 .description_user .information_container .section_main_buttons .projects_button {
   color: #000000;
