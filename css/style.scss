@@ -1,5 +1,6 @@
 @import 'variaveis';
 @import 'mixins';
+@import 'menu';
 
 /* Formatação Geral */
 * {
@@ -11,22 +12,23 @@
 /* Formatação do menu */
 
 .nav_header {
-    $display_flex: flex;
+    display: none;
     justify-content: $justify_content_center;
     align-items: $alingItems;
-    margin: 2% 0;
+    margin: 1% 0;
     padding: 1%;
 
     & .navbar{
-        width: 80%;
+        width: 61%;
+        border-bottom: $borderBlack;
+        margin-left: 15%;
 
         & .menu_icon {
             display: $display_flex;
             justify-content: flex-end;
             align-items: $alingItems;
-            border-bottom: $borderBlack;
             padding: 10px;
-            margin: 0 10%;
+            margin: 0 1%;
 
         & .img_logo {
             cursor: pointer;
@@ -42,14 +44,14 @@
     }    
 }
 
-/* Formatação do main */
-.main_section {
-    display: flex;
+// Formatação do main 
+.main_section { 
+    display: none;
     justify-content: start;
     align-items: $alingItems;
     padding: 10px;
 
-    & .user_profile {
+    & .user_profile { // Formatação do perfil do usuário
         position: absolute;
         cursor: pointer;
         display: $display_flex;
@@ -58,34 +60,32 @@
         padding: 5px;
         margin: 0 17%;
         width: auto;
-        bottom: 3.5em;
+        bottom: 4.5em;
+
+        & .profile_symbol {
+            @include profile_symbol();
+            left: 13.8em;
+            bottom: 24.8em;
+        }
 
         & .img_profile {
-            z-index: 2;
-            position: absolute;
-            cursor: pointer;
-            border: $borderBlack;
-            border-radius: 10px;
-            width: 250px;
-            height: 400px;
+            @include img_profile();
             right: 1.5em;
             bottom: 1em;
+            width: 250px;
+            height: 400px;
         }
 
         & .square_profile {
-            z-index: 1;
-            border: $borderBlack;
-            border-radius: 10px;
-            background-color: antiquewhite;
+            @include square_profile();
             width: 250px;
             height: 400px;
-            box-shadow: $shadowBox;
         }
     }
 }
 
 .description_user {
-    display: flex;
+    display: $display_flex;
     justify-content: flex-end;
     align-items: $alingItems;
     width: 100%;
@@ -121,11 +121,10 @@
 
             & .main_button { // Classe geral dos botões
                 @include main_button;
-
-                & :hover {
-                    transform: scale(1.1);
+                transition: all 0.8s ease;
+            }:hover { // Aumenta o tamanho de todos os botões relacionados a classe
+                    transform: scale(1.1); 
                 }
-            }
             & .contact_button {
                 color: #fff;
                 border: $borderWhite;
@@ -142,26 +141,22 @@
 }
 
 .container_footer{
-    display: $display_flex;
+    display: none;
     justify-content: flex-end;
     align-items: $alingItems;
+    border-top: $borderBlack; 
     padding: 1%;
-    margin: 3% 0;
+    margin: 4% 15%;
+    width: 61%;
 
     & .footer_section {
         display: $display_flex;
         justify-content: $justify_content_center;
         align-items: $alingItems;
-        border-top: $borderBlack; 
-        margin: 0 15%;
-        width: 67.5%;
 
-        & .information_footer_section {
-            margin-left: 1%;
-
+        & p, h4 {
+            margin: 0 2px;
         }
-
-
     } 
 
 }

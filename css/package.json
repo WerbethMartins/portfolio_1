@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "js.js",
   "scripts": {
-    "compile": "sass style.scss style.css",
+    "compile": "sass style.scss style.css",              
     "observation": "sass --watch style.scss style.css"
   },
   "repository": {

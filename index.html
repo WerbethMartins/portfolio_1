@@ -18,7 +18,7 @@
     <!-- Normalize via CDN -->
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-oHDEc8XedZdvqdzEvCxhgehDLGTP8fy7uusF1LGSe8r6vFk0f+wLL6fEN3NszHmWlk0G2P0hszAmz1oxR8+log==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- Estilo CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <title>Portifólio</title>
 </head>
 <body>
@@ -34,8 +34,10 @@
     <!-- Conteúdo principal -->
     <main>
         <section id="main_section" class="container main_section" aria-labelledby="main section">
+
             <!-- Configuração do perfil -->
             <div id="user_profile" class="user_profile" aria-labelledby="User Profile">
+                <h4 class="profile_symbol"> DEV </h4>
                 <img loading="lazy" class="img_profile" src="/imagem/headshot-3.f927e5a.webp" alt="Foto de perfil">
                 <div class="square_profile"></div>
             </div>
@@ -66,13 +68,28 @@
                     </div>
                 </div>
             </section>
-            
+        </section>
+
+        <!-- Confinguração dos itens do menu -->
+        <section id="menu_items" class="menu_container menu_items" aria-labelledby="menu items">
+            <div class="user_profile_menu" aria-labelledby="User Profile">
+                <h4 class="profile_symbol"> DEV </h4>
+                <img loading="lazy" class="img_profile" src="/imagem/headshot-3.f927e5a.webp" alt="Foto de perfil">
+                <div class="square_profile"></div>
+            </div>
+            <section id="menu_squares" class="square_container menu_square" aria-labelledby="menu squares">
+                <div class="square square_1"><button class="square_button">Projects</button></div>
+                <div class="square square_2"><button class="square_button">Contact</button></div>
+                <div class="square square_3"><button class="square_button">About me</button></div>
+                <div class="square square_4"><button class="square_button">Home</button></div>
+            </section>
         </section>
     </main>
 
     <!-- Rodapé -->
     <footer id="footer" class="container_footer">
         <section id="footer_section" class="container footer_section">
+            
             <div id="follow-text" class="information_footer_section">
                 <h4 class="follow_me">Follow Me | </h4> 
             </div>

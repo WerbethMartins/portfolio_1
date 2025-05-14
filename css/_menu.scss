@@ -1,0 +1,76 @@
+@import 'mixins';
+@import 'variaveis';
+
+// Configurações do menu
+.menu_items {
+    display: $display_flex;
+    justify-content: $justify_content_center;
+    align-items: $alingItems;
+    border: 1px solid #000;
+    margin: 3em 0;
+    width: 100%;
+
+    & .user_profile_menu {
+        display: $display_flex;
+        justify-content: $justify_content_center;
+        align-items: $alingItems;
+        width: 20%;
+
+        & .profile_symbol {
+            @include profile_symbol();
+            left: 26em;
+            bottom: 25em
+        }
+        & .img_profile  {
+            @include img_profile();
+            left: 14em;
+            bottom: 9em;
+            width: 220px;
+            height: 280px;
+        }
+        & .square_profile {
+            @include square_profile();
+            left: 15em;
+            width: 220px;
+            height: 280px;
+        }   
+    }
+
+    & .menu_square {
+        display: $display_flex;
+        justify-content: $justify_content_center;
+        flex-wrap: wrap;
+        margin: 2%;
+        width: 50%;
+        text-shadow: $shadowBox;
+
+        & .img_menu_items {
+            @include img_menu_items();
+        } 
+        & .square {
+            @include square();
+            margin: 2%;
+            box-shadow: $shadowSquare;
+
+            & .square_button {
+                @include square_button();
+            } & :hover {
+                transform: scale(1.1);
+            }
+        } & :hover {
+            box-shadow: 8px 13px 1px rgb(225, 63, 34);
+        }
+        & .square_1 {
+            background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
+        }
+        & .square_2 {
+            background-image: url('/imagem/contato.jpg');
+        }
+        & .square_3 {
+            background-image: url('/imagem/sobre.jpg');
+        }
+        & .square_4 {
+            background-image: url('/imagem/home.jpg');
+        }
+    }
+}

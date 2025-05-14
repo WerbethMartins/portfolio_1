@@ -1,0 +1,264 @@
+@charset "UTF-8";
+.menu_items {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  margin: 3em 0;
+  width: 100%;
+}
+.menu_items .user_profile_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.menu_items .user_profile_menu .profile_symbol {
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #000;
+  padding: 2px;
+  text-shadow: 1px 1px 3px lightgoldenrodyellow;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 26em;
+  bottom: 25em;
+}
+.menu_items .user_profile_menu .img_profile {
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+  left: 14em;
+  bottom: 9em;
+  width: 220px;
+  height: 280px;
+}
+.menu_items .user_profile_menu .square_profile {
+  z-index: 1;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgb(228, 167, 156);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 15em;
+  width: 220px;
+  height: 280px;
+}
+.menu_items .menu_square {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 2%;
+  width: 50%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.menu_items .menu_square .img_menu_items {
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.8s ease-in;
+}
+.menu_items .menu_square .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-size: cover;
+  background-position: center;
+  margin: 0 5px;
+  width: 35%;
+  height: 200px;
+  margin: 2%;
+  box-shadow: 8px 10px 1px rgb(228, 167, 156);
+}
+.menu_items .menu_square .square .square_button {
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 4px;
+  width: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in;
+}
+.menu_items .menu_square .square :hover {
+  transform: scale(1.1);
+}
+.menu_items .menu_square :hover {
+  box-shadow: 8px 13px 1px rgb(225, 63, 34);
+}
+.menu_items .menu_square .square_1 {
+  background-image: url("/imagem/estacao-de-trabalho-com-laptop.jpg");
+}
+.menu_items .menu_square .square_2 {
+  background-image: url("/imagem/contato.jpg");
+}
+.menu_items .menu_square .square_3 {
+  background-image: url("/imagem/sobre.jpg");
+}
+.menu_items .menu_square .square_4 {
+  background-image: url("/imagem/home.jpg");
+}
+
+/* Formatação Geral */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Formatação do menu */
+.nav_header {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 1% 0;
+  padding: 1%;
+}
+.nav_header .navbar {
+  width: 61%;
+  border-bottom: 1px solid #000;
+  margin-left: 15%;
+}
+.nav_header .navbar .menu_icon {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 10px;
+  margin: 0 1%;
+}
+.nav_header .navbar .menu_icon .img_logo {
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.nav_header .navbar .menu_icon :hover {
+  transform: scale(1.1);
+}
+
+.main_section {
+  display: none;
+  justify-content: start;
+  align-items: center;
+  padding: 10px;
+}
+.main_section .user_profile {
+  position: absolute;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 0 17%;
+  width: auto;
+  bottom: 4.5em;
+}
+.main_section .user_profile .profile_symbol {
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #000;
+  padding: 2px;
+  text-shadow: 1px 1px 3px lightgoldenrodyellow;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 13.8em;
+  bottom: 24.8em;
+}
+.main_section .user_profile .img_profile {
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+  right: 1.5em;
+  bottom: 1em;
+  width: 250px;
+  height: 400px;
+}
+.main_section .user_profile .square_profile {
+  z-index: 1;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgb(228, 167, 156);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  width: 250px;
+  height: 400px;
+}
+
+.description_user {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: auto;
+}
+.description_user .information_container {
+  margin-right: 7em;
+  width: 50%;
+}
+.description_user .information_container .user_title {
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.description_user .information_container .user_name h2 {
+  color: #b52323;
+  margin: 1% 6%;
+  width: 100%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.description_user .information_container .user_paragraph p {
+  border: 1px solid #000;
+  border-radius: 5px;
+  box-sizing: border-box;
+  padding: 5px;
+  margin: 2% 0;
+  width: 70%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.description_user .information_container .section_main_buttons {
+  margin: 3% 0;
+}
+.description_user .information_container .section_main_buttons .main_button {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 3px;
+  margin: 3px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  transition: all 0.8s ease;
+}
+.description_user .information_container .section_main_buttons :hover {
+  transform: scale(1.1);
+}
+.description_user .information_container .section_main_buttons .contact_button {
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #b52323;
+}
+.description_user .information_container .section_main_buttons .projects_button {
+  color: #000000;
+  border: 1px solid #000;
+  background: none;
+}
+
+.container_footer {
+  display: none;
+  justify-content: flex-end;
+  align-items: center;
+  border-top: 1px solid #000;
+  padding: 1%;
+  margin: 4% 15%;
+  width: 61%;
+}
+.container_footer .footer_section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container_footer .footer_section p, .container_footer .footer_section h4 {
+  margin: 0 2px;
+}
+
+/*# sourceMappingURL=style.css.map */
