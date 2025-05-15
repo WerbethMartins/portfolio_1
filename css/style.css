@@ -1,3 +1,10 @@
+/* Error: Top-level selectors may not contain the parent selector "&".
+ *    ,
+ * 42 | } & :hover {
+ *    |   ^
+ *    '
+ *   _mixins.scss 42:3  @import
+ *   style.scss 2:9     root stylesheet */
 @charset "UTF-8";
 .menu_items {
   display: flex;
@@ -262,3 +269,4 @@
 }
 
 /*# sourceMappingURL=style.css.map */
+

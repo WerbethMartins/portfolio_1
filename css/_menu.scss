@@ -6,7 +6,8 @@
     display: $display_flex;
     justify-content: $justify_content_center;
     align-items: $alingItems;
-    border: 1px solid #000;
+    border: $borderBlack;
+    background-color: rgb(209, 246, 246);
     margin: 3em 0;
     width: 100%;
 
@@ -50,16 +51,12 @@
         & .square {
             @include square();
             margin: 2%;
-            box-shadow: $shadowSquare;
+            box-shadow: $shadowSquare;    
 
             & .square_button {
                 @include square_button();
-            } & :hover {
-                transform: scale(1.1);
-            }
-        } & :hover {
-            box-shadow: 8px 13px 1px rgb(225, 63, 34);
-        }
+            } 
+        } 
         & .square_1 {
             background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
         }

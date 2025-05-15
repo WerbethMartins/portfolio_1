@@ -39,6 +39,8 @@
     margin: 0 5px;
     width: 35%;
     height: 200px;
+} & :hover {
+    box-shadow: 8px 13px 1px rgb(225, 63, 34);
 }
 
 @mixin img_menu_items{
@@ -56,6 +58,9 @@
     width: 50%;
     box-shadow: $shadowBox;
     transition: all 0.3s ease-in;
+} & :hover {
+    background-color: #f0f0f0;
+    transform: scale(1.1);
 }
 
 // Formatação dos botões principais

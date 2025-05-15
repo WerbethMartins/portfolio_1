@@ -1,21 +1,13 @@
 {
-  "name": "sass",
+  "name": "css",
   "version": "1.0.0",
-  "main": "js.js",
+  "main": "index.js",
   "scripts": {
-    "compile": "sass style.scss style.css",              
-    "observation": "sass --watch style.scss style.css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/WerbethMartins/portfolio_1.git"
+    "compile": "sass style.scss style.css",
+    "watch": "sass --watch style.scss:style.css"
   },
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/WerbethMartins/portfolio_1/issues"
-  },
-  "homepage": "https://github.com/WerbethMartins/portfolio_1#readme",
   "description": "",
   "devDependencies": {
     "sass": "^1.88.0"
