@@ -1,6 +1,7 @@
 @import 'variaveis';
 @import 'mixins';
 @import 'menu';
+@import 'animations';
 
 /* Formatação Geral */
 * {
@@ -12,16 +13,16 @@
 /* Formatação do menu */
 
 .nav_header {
-    display: none;
+    display: $display_flex;
     justify-content: $justify_content_center;
     align-items: $alingItems;
-    margin: 1% 0;
     padding: 1%;
+    animation: fadeIn 0.5s ease-in-out;
 
     & .navbar{
         width: 61%;
         border-bottom: $borderBlack;
-        margin-left: 15%;
+        margin-right: 10%;
 
         & .menu_icon {
             display: $display_flex;
@@ -46,31 +47,25 @@
 
 // Formatação do main 
 .main_section { 
-    display: none;
+    display: $display_flex;
     justify-content: start;
     align-items: $alingItems;
     padding: 10px;
 
     & .user_profile { // Formatação do perfil do usuário
-        position: absolute;
-        cursor: pointer;
-        display: $display_flex;
-        justify-content: $justify_content_center;
-        align-items: $alingItems;
-        padding: 5px;
-        margin: 0 17%;
-        width: auto;
-        bottom: 4.5em;
-
+        animation: fadeInProfile 1s ease-in-out;
+        @include user_profile();
         & .profile_symbol {
             @include profile_symbol();
-            left: 13.8em;
+            left: 15em;
             bottom: 24.8em;
+            animation: $symbol_animation;
+            animation-delay: $delay_animation;
         }
 
         & .img_profile {
             @include img_profile();
-            right: 1.5em;
+            left: 1em;
             bottom: 1em;
             width: 250px;
             height: 400px;
@@ -78,6 +73,8 @@
 
         & .square_profile {
             @include square_profile();
+            left: 2em;
+            bottom: 0.5em;
             width: 250px;
             height: 400px;
         }
@@ -90,6 +87,7 @@
     align-items: $alingItems;
     width: 100%;
     height: auto;
+    animation: fadeInDescription 4s ease-in-out;
 
     & .information_container{
         margin-right: 7em;
@@ -109,11 +107,13 @@
         & .user_paragraph p{
             border: $borderBlack;
             border-radius: 5px;
+            background-color: #fff;
             box-sizing: border-box;
-            padding: 5px;
+            padding: 10px;
             margin: 2% 0;
             width: 70%;
             text-shadow: $shadowBox;
+            box-shadow: $shadowBox;
         } 
 
         & .section_main_buttons {
@@ -141,13 +141,14 @@
 }
 
 .container_footer{
-    display: none;
+    display: $display_flex;
     justify-content: flex-end;
     align-items: $alingItems;
     border-top: $borderBlack; 
     padding: 1%;
     margin: 4% 15%;
     width: 61%;
+    animation: fadeInFooter 0.5s ease-in-out;
 
     & .footer_section {
         display: $display_flex;

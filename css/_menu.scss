@@ -1,14 +1,28 @@
 @import 'mixins';
 @import 'variaveis';
 
-// Configurações do menu
-.menu_items {
+// Formatação das classes para esconder e mostrar o menu
+.visible {
     display: $display_flex;
     justify-content: $justify_content_center;
     align-items: $alingItems;
-    border: $borderBlack;
-    background-color: rgb(209, 246, 246);
+    margin: 1em 0;
+    width: 100%;
+}
+
+.hidden {
+    display: none;
+    justify-content: $justify_content_center;
+    align-items: $alingItems;
     margin: 3em 0;
+    width: 100%;
+}
+
+// Configurações do menu
+.menu_items {
+    display: none;
+    justify-content: $justify_content_center;
+    align-items: $alingItems;
     width: 100%;
 
     & .user_profile_menu {
@@ -16,11 +30,14 @@
         justify-content: $justify_content_center;
         align-items: $alingItems;
         width: 20%;
+        animation: emerge 2s ease-in-out;
 
         & .profile_symbol {
             @include profile_symbol();
             left: 26em;
-            bottom: 25em
+            bottom: 25em;
+            animation: $symbol_animation;
+            animation-delay: $delay_animation;
         }
         & .img_profile  {
             @include img_profile();
@@ -32,31 +49,49 @@
         & .square_profile {
             @include square_profile();
             left: 15em;
+            top: 9em;
             width: 220px;
             height: 280px;
         }   
     }
 
-    & .menu_square {
+    & .menu_squares {
         display: $display_flex;
         justify-content: $justify_content_center;
         flex-wrap: wrap;
-        margin: 2%;
+        padding: 10px 0;
         width: 50%;
         text-shadow: $shadowBox;
 
         & .img_menu_items {
             @include img_menu_items();
         } 
+        & .border_top {
+            border-top: $borderBlack;
+            width: 100%;
+            margin: 0 0 2% 0;
+            animation: $border_menu_item;
+        }
+        & .border_bottom {
+            border-bottom: $borderBlack;
+            width: 100%;
+            margin: 2% 0 0 0;
+            animation: $border_menu_item;
+        }
         & .square {
             @include square();
             margin: 2%;
-            box-shadow: $shadowSquare;    
+            animation: fadeRight 3s ease-in-out; 
 
             & .square_button {
                 @include square_button();
-            } 
-        } 
+            } & :hover {
+                background-color: #f0f0f0;
+                transform: scale(1.1);
+        }
+        } & :hover {
+            box-shadow: 8px 10px 1px rgb(232, 63, 33);
+        }
         & .square_1 {
             background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
         }

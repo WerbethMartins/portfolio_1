@@ -1,17 +1,24 @@
-/* Error: Top-level selectors may not contain the parent selector "&".
- *    ,
- * 42 | } & :hover {
- *    |   ^
- *    '
- *   _mixins.scss 42:3  @import
- *   style.scss 2:9     root stylesheet */
 @charset "UTF-8";
-.menu_items {
+.visible {
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 1px solid #000;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+  justify-content: center;
+  align-items: center;
   margin: 3em 0;
+  width: 100%;
+}
+
+.menu_items {
+  display: none;
+  justify-content: center;
+  align-items: center;
   width: 100%;
 }
 .menu_items .user_profile_menu {
@@ -19,6 +26,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
+  animation: emerge 2s ease-in-out;
 }
 .menu_items .user_profile_menu .profile_symbol {
   z-index: 3;
@@ -29,6 +37,8 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   left: 26em;
   bottom: 25em;
+  animation: symbol_glitch 0.5s ease-out;
+  animation-delay: 1s;
 }
 .menu_items .user_profile_menu .img_profile {
   z-index: 2;
@@ -49,24 +59,37 @@
   background-color: rgb(228, 167, 156);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   left: 15em;
+  top: 9em;
   width: 220px;
   height: 280px;
 }
-.menu_items .menu_square {
+.menu_items .menu_squares {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  margin: 2%;
+  padding: 10px 0;
   width: 50%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-.menu_items .menu_square .img_menu_items {
+.menu_items .menu_squares .img_menu_items {
   width: 200px;
   height: 200px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.8s ease-in;
 }
-.menu_items .menu_square .square {
+.menu_items .menu_squares .border_top {
+  border-top: 1px solid #000;
+  width: 100%;
+  margin: 0 0 2% 0;
+  animation: border_menu_item 2s ease-out;
+}
+.menu_items .menu_squares .border_bottom {
+  border-bottom: 1px solid #000;
+  width: 100%;
+  margin: 2% 0 0 0;
+  animation: border_menu_item 2s ease-out;
+}
+.menu_items .menu_squares .square {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -76,10 +99,11 @@
   margin: 0 5px;
   width: 35%;
   height: 200px;
-  margin: 2%;
   box-shadow: 8px 10px 1px rgb(228, 167, 156);
+  margin: 2%;
+  animation: fadeRight 3s ease-in-out;
 }
-.menu_items .menu_square .square .square_button {
+.menu_items .menu_squares .square .square_button {
   cursor: pointer;
   border: 1px solid #000;
   background-color: #fff;
@@ -88,25 +112,247 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease-in;
 }
-.menu_items .menu_square .square :hover {
+.menu_items .menu_squares .square :hover {
+  background-color: #f0f0f0;
   transform: scale(1.1);
 }
-.menu_items .menu_square :hover {
-  box-shadow: 8px 13px 1px rgb(225, 63, 34);
+.menu_items .menu_squares :hover {
+  box-shadow: 8px 10px 1px rgb(232, 63, 33);
 }
-.menu_items .menu_square .square_1 {
+.menu_items .menu_squares .square_1 {
   background-image: url("/imagem/estacao-de-trabalho-com-laptop.jpg");
 }
-.menu_items .menu_square .square_2 {
+.menu_items .menu_squares .square_2 {
   background-image: url("/imagem/contato.jpg");
 }
-.menu_items .menu_square .square_3 {
+.menu_items .menu_squares .square_3 {
   background-image: url("/imagem/sobre.jpg");
 }
-.menu_items .menu_square .square_4 {
+.menu_items .menu_squares .square_4 {
   background-image: url("/imagem/home.jpg");
 }
 
+.visible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1em 0;
+  width: 100%;
+}
+
+.hidden {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  margin: 3em 0;
+  width: 100%;
+}
+
+.menu_items {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.menu_items .user_profile_menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  animation: emerge 2s ease-in-out;
+}
+.menu_items .user_profile_menu .profile_symbol {
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #000;
+  padding: 2px;
+  text-shadow: 1px 1px 3px lightgoldenrodyellow;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 26em;
+  bottom: 25em;
+  animation: symbol_glitch 0.5s ease-out;
+  animation-delay: 1s;
+}
+.menu_items .user_profile_menu .img_profile {
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+  left: 14em;
+  bottom: 9em;
+  width: 220px;
+  height: 280px;
+}
+.menu_items .user_profile_menu .square_profile {
+  z-index: 1;
+  position: absolute;
+  border: 1px solid #000;
+  border-radius: 10px;
+  background-color: rgb(228, 167, 156);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 15em;
+  top: 9em;
+  width: 220px;
+  height: 280px;
+}
+.menu_items .menu_squares {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 10px 0;
+  width: 50%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.menu_items .menu_squares .img_menu_items {
+  width: 200px;
+  height: 200px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.8s ease-in;
+}
+.menu_items .menu_squares .border_top {
+  border-top: 1px solid #000;
+  width: 100%;
+  margin: 0 0 2% 0;
+  animation: border_menu_item 2s ease-out;
+}
+.menu_items .menu_squares .border_bottom {
+  border-bottom: 1px solid #000;
+  width: 100%;
+  margin: 2% 0 0 0;
+  animation: border_menu_item 2s ease-out;
+}
+.menu_items .menu_squares .square {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  background-size: cover;
+  background-position: center;
+  margin: 0 5px;
+  width: 35%;
+  height: 200px;
+  box-shadow: 8px 10px 1px rgb(228, 167, 156);
+  margin: 2%;
+  animation: fadeRight 3s ease-in-out;
+}
+.menu_items .menu_squares .square .square_button {
+  cursor: pointer;
+  border: 1px solid #000;
+  background-color: #fff;
+  padding: 4px;
+  width: 50%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in;
+}
+.menu_items .menu_squares .square :hover {
+  background-color: #f0f0f0;
+  transform: scale(1.1);
+}
+.menu_items .menu_squares :hover {
+  box-shadow: 8px 10px 1px rgb(232, 63, 33);
+}
+.menu_items .menu_squares .square_1 {
+  background-image: url("/imagem/estacao-de-trabalho-com-laptop.jpg");
+}
+.menu_items .menu_squares .square_2 {
+  background-image: url("/imagem/contato.jpg");
+}
+.menu_items .menu_squares .square_3 {
+  background-image: url("/imagem/sobre.jpg");
+}
+.menu_items .menu_squares .square_4 {
+  background-image: url("/imagem/home.jpg");
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes border_menu_item {
+  0% {
+    opacity: 0;
+    transform: translateX(20%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes emerge {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes symbol_glitch {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
+}
+@keyframes fadeInProfile {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes fadeInDescription {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInFooter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 /* Formatação Geral */
 * {
   margin: 0;
@@ -116,16 +362,16 @@
 
 /* Formatação do menu */
 .nav_header {
-  display: none;
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1% 0;
   padding: 1%;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .nav_header .navbar {
   width: 61%;
   border-bottom: 1px solid #000;
-  margin-left: 15%;
+  margin-right: 10%;
 }
 .nav_header .navbar .menu_icon {
   display: flex;
@@ -146,12 +392,13 @@
 }
 
 .main_section {
-  display: none;
+  display: flex;
   justify-content: start;
   align-items: center;
   padding: 10px;
 }
 .main_section .user_profile {
+  animation: fadeInProfile 1s ease-in-out;
   position: absolute;
   cursor: pointer;
   display: flex;
@@ -169,8 +416,10 @@
   padding: 2px;
   text-shadow: 1px 1px 3px lightgoldenrodyellow;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  left: 13.8em;
+  left: 15em;
   bottom: 24.8em;
+  animation: symbol_glitch 0.5s ease-out;
+  animation-delay: 1s;
 }
 .main_section .user_profile .img_profile {
   z-index: 2;
@@ -178,7 +427,7 @@
   cursor: pointer;
   border: 1px solid #000;
   border-radius: 10px;
-  right: 1.5em;
+  left: 1em;
   bottom: 1em;
   width: 250px;
   height: 400px;
@@ -190,6 +439,8 @@
   border-radius: 10px;
   background-color: rgb(228, 167, 156);
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  left: 2em;
+  bottom: 0.5em;
   width: 250px;
   height: 400px;
 }
@@ -200,6 +451,7 @@
   align-items: center;
   width: 100%;
   height: auto;
+  animation: fadeInDescription 4s ease-in-out;
 }
 .description_user .information_container {
   margin-right: 7em;
@@ -217,11 +469,13 @@
 .description_user .information_container .user_paragraph p {
   border: 1px solid #000;
   border-radius: 5px;
+  background-color: #fff;
   box-sizing: border-box;
-  padding: 5px;
+  padding: 10px;
   margin: 2% 0;
   width: 70%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 .description_user .information_container .section_main_buttons {
   margin: 3% 0;
@@ -251,13 +505,14 @@
 }
 
 .container_footer {
-  display: none;
+  display: flex;
   justify-content: flex-end;
   align-items: center;
   border-top: 1px solid #000;
   padding: 1%;
   margin: 4% 15%;
   width: 61%;
+  animation: fadeInFooter 0.5s ease-in-out;
 }
 .container_footer .footer_section {
   display: flex;
@@ -269,4 +524,3 @@
 }
 
 /*# sourceMappingURL=style.css.map */
-

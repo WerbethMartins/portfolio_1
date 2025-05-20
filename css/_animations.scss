@@ -1,0 +1,107 @@
+@import 'menu';
+@import 'variaveis';
+@import 'mixins';
+
+// Header 
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+// Border menu items 
+@keyframes border_menu_item {
+    0% {
+        opacity: 0;
+        transform: translateX(20%);
+    } 100% {
+        opacity: 1;
+        transform: translateX(0);
+    } 
+}
+
+// Animação dos items do menu
+@keyframes fadeRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// Animação do perfil
+@keyframes emerge {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+//Simbolo "DEV"
+@keyframes symbol_glitch {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: translate(-4px, 4px);
+    }
+    40% {
+        transform: translate(-4px, -4px);
+    }
+    60% {
+        transform: translate(4px, 4px);
+    }
+    80% {
+        transform: translate(4px, -4px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+// User Profile
+@keyframes fadeInProfile {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+// User description
+@keyframes fadeInDescription
+{
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+// Footer 
+@keyframes fadeInFooter {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

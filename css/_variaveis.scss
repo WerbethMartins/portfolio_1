@@ -10,8 +10,9 @@ $shadowBox: 1px 1px 3px rgb(0, 0, 0, 0.7); // Box shadow
 $borderBlack: 1px solid #000; // Borda preta
 $borderWhite: 1px solid #fff; // Borda branca
 
-// Variáveis dos quadrados do menu
-$shadowSquare: 8px 10px 1px rgb(228, 167, 156); // Box shadow
-
+// Variáveis de animação
+$symbol_animation: symbol_glitch 0.5s ease-out; // Animação do simbolo "DEV"
+$border_menu_item: border_menu_item 2s ease-out; // Animação do menu item
+$delay_animation: 1s; // Delay da animação
 
 
