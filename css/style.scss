@@ -15,7 +15,7 @@
 .nav_header {
     display: $display_flex;
     justify-content: $justify_content_center;
-    align-items: $alingItems;
+    align-items: $alignItems;
     padding: 1%;
     animation: fadeIn 0.5s ease-in-out;
 
@@ -27,7 +27,7 @@
         & .menu_icon {
             display: $display_flex;
             justify-content: flex-end;
-            align-items: $alingItems;
+            align-items: $alignItems;
             padding: 10px;
             margin: 0 1%;
 
@@ -47,9 +47,9 @@
 
 // Formatação do main 
 .main_section { 
-    display: $display_flex;
+    display: none;
     justify-content: start;
-    align-items: $alingItems;
+    align-items: $alignItems;
     padding: 10px;
 
     & .user_profile { // Formatação do perfil do usuário
@@ -84,7 +84,7 @@
 .description_user {
     display: $display_flex;
     justify-content: flex-end;
-    align-items: $alingItems;
+    align-items: $alignItems;
     width: 100%;
     height: auto;
     animation: fadeInDescription 4s ease-in-out;
@@ -140,10 +140,42 @@
     }
 }
 
+.contact_section {
+    display: $display_flex;
+    justify-content: $justify_content_center;
+    align-items: $alignItems;
+    border: $borderBlack;
+    padding: 5px;
+
+    & .contact_container {
+        display: $display_flex;
+        justif-content: $justify_content_center;
+        align-items: $alignItems;
+        border: $borderBlack;
+        padding: 5px;
+        width: 100%;
+            & .profile_symbol {
+            @include profile_symbol();
+            border: none;
+            background: none;
+            font-size: 20px;
+            text-shadow: $shadowBox;
+            box-shadow: none;
+            animation: $symbol_animation;
+            animation-delay: $delay_animation;
+            }
+
+            & .contact_image{
+                width: 200px;
+                height: 300px;
+            }
+    }
+}
+
 .container_footer{
     display: $display_flex;
     justify-content: flex-end;
-    align-items: $alingItems;
+    align-items: $alignItems;
     border-top: $borderBlack; 
     padding: 1%;
     margin: 4% 15%;
@@ -153,7 +185,7 @@
     & .footer_section {
         display: $display_flex;
         justify-content: $justify_content_center;
-        align-items: $alingItems;
+        align-items: $alignItems;
 
         & p, h4 {
             margin: 0 2px;

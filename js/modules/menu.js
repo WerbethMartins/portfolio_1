@@ -15,10 +15,16 @@ export function openMenu() {
 }
 
 export function initializeMenu() {
-    // Evendo de clique no botão do menu
+    // Evento de clique no botão do menu
     $('#menu_icon').on('click', () =>{
-        openMenu(); // Chama a função para abrir o menu
-        $('.navbar').hide();
-        $('#footer').hide();
-    })
+        $('#menu_icon').css({
+            "transition": 'all 2s cubic-bezier(0.4,0,0.2,1)',
+            "transform": 'translateY(-60px)',
+        }); 
+        setTimeout(() => {
+            openMenu(); // Chama a função para abrir o menu
+            $('.navbar').hide();
+            $('#footer').hide();
+        }, 1000);
+    });
 }

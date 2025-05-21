@@ -6,7 +6,7 @@
     cursor: pointer;
     display: $display_flex;
     justify-content: $justify_content_center;
-    align-items: $alingItems;
+    align-items: $alignItems;
     padding: 5px;
     margin: 0 17%;
     width: auto;
@@ -45,7 +45,7 @@
 @mixin square { // Formatação geral dos quadrados do menu
     display: $display_flex;
     justify-content: $justify_content_center;
-    align-items: $alingItems;
+    align-items: $alignItems;
     border: $borderBlack;
     background-size: cover; // Cobrindo todo o quadrado 
     background-position: center;
@@ -57,8 +57,8 @@
     
 
 @mixin img_menu_items{
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     box-shadow: $shadowBox;
     transition: all 0.8s ease-in;
 }
