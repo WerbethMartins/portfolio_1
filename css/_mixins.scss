@@ -1,5 +1,28 @@
 @import 'variaveis';
 
+// Display flex
+@mixin display_flex_center {
+    justify-content: $justify_content_center;
+    align-items: $alignItems;
+}
+
+@mixin display_flex_start {
+    display: $display_flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+// Bordas e background
+@mixin contact_style {
+    border: $borderWhite;
+    background-color: #EDEDED;
+    border-radius: 15px;
+    padding: 2%;
+    margin: 2% 0;
+    width: 80%;
+    box-shadow: $shadowBox;
+}
+
 // Formatação da imagem do perfil do usuario
 @mixin user_profile {
     position: absolute;

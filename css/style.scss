@@ -1,4 +1,4 @@
-@import 'variaveis';
+@use 'variaveis';
 @import 'mixins';
 @import 'menu';
 @import 'animations';
@@ -13,7 +13,7 @@
 /* Formatação do menu */
 
 .nav_header {
-    display: $display_flex;
+    display: flex;
     justify-content: $justify_content_center;
     align-items: $alignItems;
     padding: 1%;
@@ -47,7 +47,7 @@
 
 // Formatação do main 
 .main_section { 
-    display: none;
+    display: flex;
     justify-content: start;
     align-items: $alignItems;
     padding: 10px;
@@ -141,34 +141,97 @@
 }
 
 .contact_section {
-    display: $display_flex;
-    justify-content: $justify_content_center;
-    align-items: $alignItems;
-    border: $borderBlack;
-    padding: 5px;
+    display: none;
+    @include display_flex_center;
+    margin: 2% 0;
+
+    & .contact_menu_icon {
+        @include display_flex_center;
+        padding: 10px;
+        margin: 0 1%;
+        width: 10%;
+
+        & .contact_image_logo {
+            cursor: pointer;
+            width: 20px;
+            height: 20px;
+            transition: all 0.2s ease;
+            box-shadow: $shadowBox;
+            animation: fadeIn 0.5s ease-in-out;
+        } &:hover {
+                transform: scale(1.1);
+            }
+    }
 
     & .contact_container {
-        display: $display_flex;
-        justif-content: $justify_content_center;
-        align-items: $alignItems;
+        @include display_flex_start;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
         border: $borderBlack;
-        padding: 5px;
-        width: 100%;
-            & .profile_symbol {
+        border-radius: 20px;
+        background-color: #FFF3F3;
+        padding: 1%;
+        width: 60%;
+        text-shadow: $shadowBox;
+
+        & .profile_symbol {
             @include profile_symbol();
             border: none;
             background: none;
             font-size: 20px;
+            right: 36%;
+            top: 5.5em;
             text-shadow: $shadowBox;
             box-shadow: none;
             animation: $symbol_animation;
             animation-delay: $delay_animation;
+        }
+
+        & .contact_image{
+            position: relative;
+            left: 5%;
+            width: 200px;
+            height: 400px;
+            animation: fadeRight 0.5s ease-in-out;
+        }
+
+        & .contact_info {
+            @include display_flex_center;
+            position: absolute;
+            flex-direction: column;
+            padding: 1%;
+            top: 18%;
+            left: 40%;
+            width: 30%;
+            animation: fadeLeft 0.5s ease-in-out;
+
+            & h2 {
+                @include contact_style;
+                color: #bd1b1b;
+                padding-left: 1em;
             }
 
-            & .contact_image{
+            & .contact_social {
+                @include display_flex_start;
+                @include contact_style;
+                flex-direction: column;        
+            }
+
+            & .contact_email {
+                @include display_flex_start;
+                @include contact_style;
+                flex-direction: column;
+            }  
+
+            & img { // Formatação do vetor da página de contato
+                z-index: 2;
+                position: absolute;
+                border-radius: 20px;
+                top: 5em;
+                left: 19.1em;
                 width: 200px;
                 height: 300px;
             }
+        }
     }
 }
 
@@ -184,8 +247,7 @@
 
     & .footer_section {
         display: $display_flex;
-        justify-content: $justify_content_center;
-        align-items: $alignItems;
+        @include display_flex_center;
 
         & p, h4 {
             margin: 0 2px;

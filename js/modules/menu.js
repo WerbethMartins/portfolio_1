@@ -1,22 +1,27 @@
-// Função para abrir o menu com jquery
-export function openMenu() {
-    if ($('#menu_items').is(':visible')) {
-        // Se o menu estiver visível, esconde-o
-        $('#menu_items').removeClass('visible');
-        $('#menu_items').addClass('hidden');
-        $('#main_section').show();
+// Função para alternar a visibilidade de seções
+function toggleVisibility(sectionToShow, sectionToHide) {
+    if($(sectionToShow).is(':visible')){
+        $(sectionToShow).removeClass('visible').addClass('hidden');
+        $(sectionToHide).show();
     } else {
-        // Se o menu não estiver visível, mostra-o
-        $('#menu_items').css('display', 'flex');
-        $('#menu_items').addClass('visible');
-        $('#menu_items').removeClass('hidden');
-        $('#main_section').hide();
+        $(sectionToShow).css('display', 'flex').removeClass('hidden').addClass('visible');
+        $(sectionToHide).hide();
     }
 }
 
+// Função para abrir o menu principal
+export function openMenu(){
+    toggleVisibility('#menu_items', '#main_section');
+}
+
+// Função para abrir a página de contato
+export function openContact() {
+    toggleVisibility('#contact_section', '#menu_items');
+}
+
 export function initializeMenu() {
-    // Evento de clique no botão do menu
-    $('#menu_icon').on('click', () =>{
+    // Evento de clique no botão do menu principal
+    $('#menu_icon').on('click', () => {
         $('#menu_icon').css({
             "transition": 'all 2s cubic-bezier(0.4,0,0.2,1)',
             "transform": 'translateY(-60px)',
@@ -27,4 +32,18 @@ export function initializeMenu() {
             $('#footer').hide();
         }, 1000);
     });
+
+    // Evento de clique no botão contact
+    $('#contact').on('click', () => {
+        $('.square_2').css({
+            "transition": 'all 2s cubic-bezier(0.4,0,0.2,1)',
+            "opacity": '0.5',
+            "transform": 'translateY(-60px)',
+        }); 
+        setTimeout(() => {
+            openContact(); // Chama a função para abrir a pagina de contato
+            $('.navbar').hide();
+        }, 1000);
+    });
+
 }
