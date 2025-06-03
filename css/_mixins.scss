@@ -12,6 +12,30 @@
     align-items: flex-start;
 }
 
+// Logo menu 
+@mixin image_logo {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: $shadowBox;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}
+
+// Formatação dos botões principais
+@mixin main_button {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 4px 3px;
+    margin: 3px;
+    text-shadow: $shadowBox;
+    box-shadow: $shadowBox;
+    transition: all 0.3s ease;            
+}
+
 // Bordas e background
 @mixin contact_style {
     border: $borderWhite;
@@ -62,9 +86,7 @@
     box-shadow: $shadowBox;
 }
 
-// Formatação do itens do menu
-
-
+// Formatação dos itens do menu
 @mixin square { // Formatação geral dos quadrados do menu
     display: $display_flex;
     justify-content: $justify_content_center;
@@ -75,7 +97,7 @@
     margin: 0 5px;
     width: 35%;
     height: 200px;
-    box-shadow:  8px 10px 1px rgb(228, 167, 156); // Box shadow
+    box-shadow:  8px 10px 1px rgb(228, 167, 156);
 }
     
 
@@ -96,13 +118,3 @@
     transition: all 0.3s ease-in;
 }
 
-// Formatação dos botões principais
-@mixin main_button {
-    cursor: pointer;
-    font-size: 12px;
-    padding: 4px 3px;
-    margin: 3px;
-    text-shadow: $shadowBox;
-    box-shadow: $shadowBox;
-    transition: all 0.3s ease;            
-}

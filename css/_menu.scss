@@ -30,7 +30,7 @@
         justify-content: $justify_content_center;
         align-items: $alignItems;
         width: 20%;
-        animation: merge 5s ease-in-out;
+        animation: merge 3s ease-in-out;
 
         & .profile_symbol {
             @include profile_symbol();

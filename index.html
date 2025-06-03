@@ -7,19 +7,15 @@
     <meta name="description" content="Portifólio de projetos desenvolvidos por mim.">
     <meta name="keywords" content="HTML, CSS, JavaScript, Portifólio, Projetos, Desenvolvimento Web">
     <meta name="author" content="Werbeth">
-    <!-- Open Graph (para compartilhamento em redes sociais) -->
     <meta property="og:title" content="[Werbeth] | Portfólio">
     <meta property="og:description" content="Confira meu trabalho e projetos.">
     <meta property="og:type" content="website">
-    <!-- // Define a URL do site  -->
     <base href="/">
-    <!-- Favicon, fonts -->
     <link rel="stylesheet" href="assets/fonts/fonts.css">
     <link rel="stylesheet" href="assets/icons/icons.css">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <!-- Normalize via CDN -->
-     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-oHDEc8XedZdvqdzEvCxhgehDLGTP8fy7uusF1LGSe8r6vFk0f+wLL6fEN3NszHmWlk0G2P0hszAmz1oxR8+log==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Estilo CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-oHDEc8XedZdvqdzEvCxhgehDLGTP8fy7uusF1LGSe8r6vFk0f+wLL6fEN3NszHmWlk0G2P0hszAmz1oxR8+log==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/css/style.css">
     <title>Portifólio</title>
 </head>
@@ -28,7 +24,7 @@
     <header id="header" class="nav_header">
         <nav id="nav" class="navbar container_nav">
             <div id="menu_icon" class="menu_icon">
-                <img class="img_logo" src="/imagem/windows-8.png">
+                <img class="main_img_logo" src="/imagem/windows-8.png">
             </div>
         </nav>
     </header>
@@ -42,15 +38,17 @@
                 <img loading="lazy" class="img_profile" src="/imagem/headshot-3.f927e5a.webp" alt="Foto de perfil">
                 <div class="square_profile"></div>
             </div>
-            <section id="menu_squares" class="square_container menu_squares" aria-labelledby="menu squares">
+            <article id="menu_squares" class="square_container menu_squares" aria-labelledby="menu squares">
                 <div class="border_top"></div>
                 <div class="square square_1"><button class="square_button">Projects</button></div>
-                <div class="square square_2"><button id="contact"  class="square_button">Contact</button></div>
+                <div class="square square_2"><button id="menu_item_contact" class="square_button contact">Contact</button></div>
                 <div class="square square_3"><button class="square_button">About me</button></div>
                 <div class="square square_4"><button class="square_button">Home</button></div>
                 <div class="border_bottom"></div>
-            </section>
+            </article>
         </section>
+
+        <!-- Página principal do portifólio -->
         <section id="main_section" class="container main_section" aria-labelledby="main section">
             <!-- Configuração do perfil -->
             <div id="user_profile" class="user_profile" aria-labelledby="User Profile">
@@ -80,19 +78,21 @@
                     </article>
                     <!-- Seção de botões -->
                     <div id="section_main_buttons" class="container section_main_buttons">
-                        <button class="main_button contact_button">CONTACT</button>
+                        <button class="main_button contact_button contact">CONTACT</button>
                         <button class="main_button projects_button">PROJECTS</button>
                     </div>
                 </div>
             </article>
         </section>
+        
+        <!-- Seção de contato -->
         <section id="contact_section" class="container contact_section" aria-labelledby="contact section">    
             <section class="contact_container">
                 <div id="contact_menu_icon" class="contact_menu_icon">
                     <img class="contact_image_logo" src="/imagem/windows-8.png">
                 </div>  
-                <h4 class="profile_symbol"> < / > </h4>
-                <img class="contact_image" src="/imagem/contact.png" alt="imagem de contato">
+                <h4 class="profile_symbol"> < > </h4>
+                <img class="contact_image" src="/imagem/contact.png" alt="imagem representativa de contato">
                 <article class="contact_info">
                     <div class="vector_1"><img src="/imagem/fundo-isometrico-geometrico-colorido-abstrato.png" alt=""></div>
                     <h2>Contact me</h2>
@@ -119,11 +119,94 @@
                 </article>
             </section>
         </section>
+
+        <!-- Seção de projetos -->
+        <section id="project_section" class="container project_section" aria-labelledby="project section">
+            <header class="project_header">
+                <h2 class="project_title">Projects</h2>
+                <img class="project_image_logo" src="/imagem/windows-8.png">
+            </header>
+            <article class="project_items">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-right" viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+                </svg>
+                <img src="/imagem/4278504.jpg" alt="image_1" class="project_image large_image large_image_1">
+                <img src="/imagem/web-design-online.jpg" alt="image_2" class="project_image small_image small_image_1">
+                <img src="/imagem/4278504.jpg" alt="image_3" class="project_image large_image large_image_2">
+                <img src="/imagem/web-design-online.jpg" alt="image_4" class="project_image small_image small_image_2">
+            </article>
+        </section>
+
+        <!-- Seção Sobre mim -->
+         <section id="about_section" class="container about_section" aria-labelledby="about section">
+            <header id="about_header" class="about_menu">
+                <img class="about_image_logo" src="/imagem/windows-8.png">
+            </header>
+            <article class="about_container">
+                <div class="user_profile_about" aria-labelledby="User about Profile">
+                    <h4 class="profile_symbol_about"> DEV </h4>
+                    <img loading="lazy" class="img_profile_about" src="/imagem/headshot-3.f927e5a.webp" alt="Foto de perfil da seção sobre mim">
+                    <div class="square_profile_about"></div>
+                </div>
+                <div class="about_information_container">
+                    <h2 class="about_title">About me</h2>
+                    <div class="education_button_container">
+                        <button class="education_button">Education</button>        
+                    </div>
+                    <div class="about_text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                    </div>
+                    <h2 class="skills_title">Skills</h2>
+                    <div class="skills_container">
+                        <p>UX/UI Design</p>
+                        <p>Java</p>
+                        <p>HTML</p>
+                        <p>Javascript</p>
+                        <p>CSS</p>
+                    </div>
+                </div>
+            </article>
+         </section>
+
+         <!-- Seção educação -->
+          <section id="education_section" class="container education_section" aria-labelledby="education section">
+            <header id="education_header" class="education_menu">
+                <img class="education_image_logo" src="/imagem/windows-8.png">
+            </header>
+            <article id="education_container" class="education_container" aria-labelledby="education container">
+                <div class="education_image_representative" aria-labelledby="Education representative">
+                    <img loading="lazy" class="education_image" src="/imagem/pessoa-segurando-uma-lampada-com-tampa-de-formatura.jpg" alt="Imagem representativa de educação">
+                    <div class="square_profile_about"></div>
+                </div>
+                <div class="education_information_container">
+                    <h2 class="education_title">Education</h2>
+                    <div class="education_text">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                    </div>
+                    <h3 class="last_education_year">2015 - 2022</h3>
+                    <div class="education_curses" aria-labelledby="education curses">
+                        <p>High School in Programing</p>
+                        <u class="education_curses_list">
+                            <li>Lorem ipsum dolor consectetur | 2015</li>
+                        </u>
+                        <p>Computer Science</p>
+                        <u class="education_curses_list">
+                            <li>Lorem ipsum dolor consectetur | 2020</li>
+                        </u>
+                        <p>Bachelor's degree</p>
+                        <u class="education_curses_list">
+                            <li>Lorem ipsum dolor consectetur | 2022</li>
+                        </u>
+                    </div>
+                </div>
+            </article>
+          </section>
+
     </main>
 
     <!-- Rodapé -->
     <footer id="footer" class="container_footer">
-        <section id="footer_section" class="container footer_section">
+        <address id="footer_section" class="container footer_section">
             
             <div id="follow-text" class="information_footer_section">
                 <h4 class="follow_me">Follow Me | </h4> 
@@ -134,7 +217,7 @@
             <div id="footer-created" class="information_footer_section">
                 <p class="year_creation">© 2023 WebDev Werbeth M.</p>
             </div>
-        </section>
+        </address>
     </footer>
 
     <!-- Jquery -->
@@ -142,5 +225,8 @@
     
     <!-- Javascript -->
     <script type="module" language="javascript" src="js/modules/main.js"></script> 
+
+    <!-- Navegação -->
+    <!-- <a href="https://api.wattsap.com/send?phone=5547991846224" target="_blank">Enviar Wattsap</a> -->
 </body>
 </html>

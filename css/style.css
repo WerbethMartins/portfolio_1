@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  animation: merge 5s ease-in-out;
+  animation: merge 3s ease-in-out;
 }
 .menu_items .user_profile_menu .profile_symbol {
   z-index: 3;
@@ -159,7 +159,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  animation: merge 5s ease-in-out;
+  animation: merge 3s ease-in-out;
 }
 .menu_items .user_profile_menu .profile_symbol {
   z-index: 3;
@@ -388,14 +388,14 @@
   padding: 10px;
   margin: 0 1%;
 }
-.nav_header .navbar .menu_icon .img_logo {
-  cursor: pointer;
+.nav_header .navbar .menu_icon .main_img_logo {
   width: 20px;
   height: 20px;
+  cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-.nav_header .navbar .menu_icon :hover {
+.nav_header .navbar .menu_icon .main_img_logo:hover {
   transform: scale(1.1);
 }
 
@@ -406,7 +406,6 @@
   padding: 10px;
 }
 .main_section .user_profile {
-  animation: fadeInProfile 1s ease-in-out;
   position: absolute;
   cursor: pointer;
   display: flex;
@@ -416,6 +415,7 @@
   margin: 0 17%;
   width: auto;
   bottom: 4.5em;
+  animation: fadeInProfile 1s ease-in-out;
 }
 .main_section .user_profile .profile_symbol {
   z-index: 3;
@@ -459,7 +459,7 @@
   align-items: center;
   width: 100%;
   height: auto;
-  animation: fadeInDescription 4s ease-in-out;
+  animation: fadeInDescription 3s ease-in-out;
 }
 .description_user .information_container {
   margin-right: 7em;
@@ -628,6 +628,275 @@
   left: 19.1em;
   width: 200px;
   height: 300px;
+}
+
+.project_section {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin: 10px 0;
+  width: 100%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.project_section .project_header {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 80%;
+}
+.project_section .project_header .project_title {
+  color: #b52323;
+  font-size: 2em;
+}
+.project_section .project_header .project_image_logo {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.project_section .project_header .project_image_logo:hover {
+  transform: scale(1.1);
+}
+.project_section .project_items {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  border-radius: 20px;
+  padding: 1%;
+  width: 80%;
+}
+.project_section .project_items .bi-arrow-right {
+  z-index: 2;
+  position: absolute;
+  cursor: pointer;
+  font-size: 2em;
+  top: 8.8%;
+  left: 73.8%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.project_section .project_items .bi-arrow-right:hover {
+  transform: translateX(5px);
+}
+.project_section .project_items .project_image {
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.project_section .project_items .project_image:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
+}
+.project_section .project_items .large_image {
+  margin: 1%;
+  width: 413px;
+  height: 215px;
+}
+.project_section .project_items .small_image {
+  margin: 1%;
+  width: 215px;
+  height: 214px;
+}
+
+.about_section {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin: 1% 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.about_section .about_menu {
+  display: flex;
+  justify-content: flex-end;
+  width: 40%;
+  margin: 1%;
+}
+.about_section .about_menu .about_image_logo {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 1%;
+}
+.about_section .about_menu .about_image_logo:hover {
+  transform: scale(1.1);
+}
+.about_section .user_profile_about {
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+}
+.about_section .user_profile_about .profile_symbol_about {
+  z-index: 3;
+  position: absolute;
+  border: 1px solid #000;
+  padding: 2px;
+  text-shadow: 1px 1px 3px lightgoldenrodyellow;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  top: 13%;
+  left: 44%;
+  animation: symbol_glitch 0.5s ease-out;
+  animation-delay: 1s;
+}
+.about_section .user_profile_about .img_profile_about {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 300px;
+  height: 400px;
+  box-shadow: 8px 10px 1px rgb(228, 167, 156);
+}
+.about_section .about_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 60%;
+  padding: 10px;
+}
+.about_section .about_container .education_button {
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 3px;
+  margin: 3px;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  position: absolute;
+  color: #fff;
+  border: 1px solid #fff;
+  background-color: #b52323;
+  top: 16%;
+  right: 22%;
+  transition: all 0.8s ease;
+}
+.about_section .about_container .education_button:hover {
+  transform: scale(1.1);
+}
+.about_section .about_container .about_information_container {
+  border: 1px solid #000;
+  padding: 1%;
+}
+.about_section .about_container .about_information_container .about_title {
+  font-size: 30px;
+  color: #b52323;
+  margin: 0 2%;
+}
+.about_section .about_container .about_information_container .about_text {
+  margin: 1em 2em;
+}
+.about_section .about_container .skills_title {
+  font-size: 30px;
+  color: #b52323;
+  margin: 0 2%;
+}
+.about_section .about_container .skills_container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  margin: 1em 1em;
+}
+.about_section .about_container .skills_container p {
+  cursor: pointer;
+  border: 1px solid #000;
+  border-radius: 10px;
+  padding: 1%;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-out;
+}
+.about_section .about_container .skills_container :hover {
+  box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.7);
+}
+
+.education_section {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  margin: 1% 0;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.education_section .education_menu {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 40%;
+  margin: 1%;
+}
+.education_section .education_menu .education_image_logo {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  margin: 1%;
+}
+.education_section .education_menu .education_image_logo:hover {
+  transform: scale(1.1);
+}
+.education_section .education_container {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 10px;
+}
+.education_section .education_container .education_image_representative {
+  justify-content: center;
+  align-items: center;
+  margin: 0 2%;
+}
+.education_section .education_container .education_image_representative .education_image {
+  border: 1px solid #000;
+  border-radius: 10px;
+  width: 300px;
+  height: 453px;
+  box-shadow: 8px 10px 1px rgb(228, 167, 156);
+}
+.education_section .education_container .education_information_container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 60%;
+  padding: 10px;
+}
+.education_section .education_container .education_information_container .education_title {
+  font-size: 35px;
+  color: #b52323;
+  margin: 0 2%;
+}
+.education_section .education_container .education_information_container .education_text {
+  font-size: 16px;
+  border-left: 1px solid #000;
+  padding: 1%;
+  margin: 1em 2em;
+}
+.education_section .education_container .education_information_container .last_education_year {
+  font-size: 4em;
+  color: #b52323;
+  margin: 0 2%;
+}
+.education_section .education_container .education_information_container .education_curses {
+  border-left: 1px solid #000;
+  margin: 1em 2em;
+  padding: 1%;
+  width: 100%;
+}
+.education_section .education_container .education_information_container .education_curses p {
+  font-size: 18px;
+  font-weight: bold;
+}
+.education_section .education_container .education_information_container .education_curses .education_curses_list li {
+  font-size: 16px;
+  margin: 0.5em 2em;
 }
 
 .container_footer {

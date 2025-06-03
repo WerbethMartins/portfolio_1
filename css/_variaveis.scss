@@ -4,15 +4,15 @@ $alignItems: center;
 $justify_content_center: center;
 
 // Variáveis gerais
-$shadowBox: 1px 1px 3px rgb(0, 0, 0, 0.7); // Box shadow
+$shadowBox: 1px 1px 3px rgb(0, 0, 0, 0.7); 
 
 // Variável para as bordas
-$borderBlack: 1px solid #000; // Borda preta
-$borderWhite: 1px solid #fff; // Borda branca
+$borderBlack: 1px solid #000; 
+$borderWhite: 1px solid #fff; 
+$borderRadius: 10px;
 
 // Variáveis de animação
 $symbol_animation: symbol_glitch 0.5s ease-out; // Animação do simbolo "DEV"
 $border_menu_item: border_menu_item 2s ease-out; // Animação do menu item
-$delay_animation: 1s; // Delay da animação
-
+$delay_animation: 1s; 
 

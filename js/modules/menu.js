@@ -34,7 +34,7 @@ export function initializeMenu() {
     });
 
     // Evento de clique no botão contact
-    $('#contact').on('click', () => {
+    $('#menu_item_contact').on('click', () => {
         $('.square_2').css({
             "transition": 'all 2s cubic-bezier(0.4,0,0.2,1)',
             "opacity": '0.5',
