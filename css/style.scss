@@ -234,7 +234,7 @@
     @include display_flex_center;
     display: none;
     flex-direction: column;
-    margin: 10px 0;
+    margin: 0 0;
     width: 100%;
     text-shadow: $shadowBox;
 
@@ -244,14 +244,17 @@
         justify-content: space-around;
         align-items: $alignItems;
         width: 80%;
+        
 
         & .project_title {
             color: #b52323;
             font-size: 2em;
+            animation: fadeLeft 0.5s ease-in-out;
         }
 
         & .project_image_logo {
             @include image_logo;
+            animation: fadeIn 0.5s ease-in-out;
         } 
 
     }
@@ -262,7 +265,6 @@
         flex-wrap: wrap;
         border: $borderBlack;
         border-radius: 20px;
-        padding: 1%;
         width: 80%;
 
         & .bi-arrow-right {
@@ -270,10 +272,11 @@
             position: absolute;
             cursor: pointer;
             font-size: 2em;
-            top: 8.8%;
-            left: 73.8%;
+            top: 11%;
+            right: 22%;
             text-shadow: $shadowBox;
             transition: all 0.3s ease;
+            animation: fadeIn 0.5s ease-in-out;
 
             &:hover {
                 transform: translateX(5px);
@@ -293,15 +296,17 @@
         }
         
         & .large_image{
-            margin: 1%;
+            margin: 0.8%;
             width: 413px;
             height: 215px;
+            animation: fadeLeft 0.9s ease-in-out;
         }
 
         & .small_image {
-            margin: 1%;
+            margin: 0.8%;
             width: 215px;
             height: 214px;
+            animation: fadeRight 0.9s ease-in-out;
         }
     }
 
@@ -311,14 +316,14 @@
     @include display_flex_center;
     display: none;
     flex-direction: column;
-    margin: 1% 0;
     text-shadow: $shadowBox;
     
     & .about_menu {
         display:  $display_flex;
         justify-content: flex-end;
-        width: 40%;
-        margin: 1%;
+        align-items: center;
+        width: 50%;
+        animation: fadeIn 0.5s ease-in-out;
 
         & .about_image_logo {
             @include image_logo;
@@ -332,8 +337,8 @@
 
             & .profile_symbol_about {
                 @include profile_symbol();
-                top: 13%;
-                left: 44%;
+                top: 14%;
+                left: 42%;
                 animation: $symbol_animation;
                 animation-delay: $delay_animation;
             }
@@ -341,9 +346,10 @@
             & .img_profile_about {
                 border: $borderBlack;
                 border-radius: $borderRadius;
-                width: 300px;
-                height: 400px;
+                width: 280px;
+                height: 375px;
                 box-shadow:  8px 10px 1px rgb(228, 167, 156);
+                animation: fadeLeft 0.5s ease-in-out;
             }
         }
 
@@ -359,9 +365,10 @@
             color: #fff;
             border: $borderWhite;
             background-color: #b52323;
-            top: 16%;
+            top: 17%;
             right: 22%;
             transition: all 0.8s ease;
+            animation: fadeRight 1.5s ease-in-out;
             
             &:hover {
                 transform: scale(1.1);
@@ -380,6 +387,7 @@
 
             & .about_text {
                 margin: 1em 2em;
+                animation: fadeRight 1s ease-in-out;
             } 
         }
 
@@ -396,12 +404,12 @@
             margin: 1em 1em;
 
             & p {
-                cursor: pointer;
                 border: $borderBlack;
                 border-radius: $borderRadius;
                 padding: 1%;
                 box-shadow: $shadowBox;
                 transition: all 0.3s ease-out;
+                animation: fadeInFooter 1s ease-in-out;
             } :hover {
                 box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.7);
             }

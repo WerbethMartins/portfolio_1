@@ -1,6 +1,7 @@
 import { initializeMenu } from "./menu.js";
+import { initializeNavigation} from "./navigation.js";
 
 $(document).ready( function() {
-    // Inicializa o menu
     initializeMenu();
+    initializeNavigation();
 });

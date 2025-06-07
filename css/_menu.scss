@@ -1,7 +1,7 @@
 @import 'mixins';
 @import 'variaveis';
 
-// Formatação das classes para esconder e mostrar o menu
+// Classes para esconder e mostrar o menu
 .visible {
     display: $display_flex;
     justify-content: $justify_content_center;
@@ -18,6 +18,9 @@
     width: 100%;
 }
 
+// Classe para animação dos itens do menu
+
+
 // Configurações do menu
 .menu_items {
     display: none;
@@ -30,7 +33,7 @@
         justify-content: $justify_content_center;
         align-items: $alignItems;
         width: 20%;
-        animation: merge 3s ease-in-out;
+        animation: merge 2s ease-in-out;
 
         & .profile_symbol {
             @include profile_symbol();
@@ -81,17 +84,18 @@
         & .square {
             @include square();
             margin: 2%;
-            animation: fadeRight 3s ease-in-out; 
+            animation: fadeRight 3s ease-in-out;
 
             & .square_button {
                 @include square_button();
             } & :hover {
                 background-color: #f0f0f0;
                 transform: scale(1.1);
-        }
-        } & :hover {
-            box-shadow: 8px 10px 1px rgb(232, 63, 33);
-        }
+            }
+            
+        } .square:hover {
+                box-shadow: 8px 10px 1px rgb(232, 63, 33);
+            }
         & .square_1 {
             background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
         }

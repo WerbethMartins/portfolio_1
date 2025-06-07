@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  animation: merge 3s ease-in-out;
+  animation: merge 2s ease-in-out;
 }
 .menu_items .user_profile_menu .profile_symbol {
   z-index: 3;
@@ -116,7 +116,7 @@
   background-color: #f0f0f0;
   transform: scale(1.1);
 }
-.menu_items .menu_squares :hover {
+.menu_items .menu_squares .square:hover {
   box-shadow: 8px 10px 1px rgb(232, 63, 33);
 }
 .menu_items .menu_squares .square_1 {
@@ -159,7 +159,7 @@
   justify-content: center;
   align-items: center;
   width: 20%;
-  animation: merge 3s ease-in-out;
+  animation: merge 2s ease-in-out;
 }
 .menu_items .user_profile_menu .profile_symbol {
   z-index: 3;
@@ -249,7 +249,7 @@
   background-color: #f0f0f0;
   transform: scale(1.1);
 }
-.menu_items .menu_squares :hover {
+.menu_items .menu_squares .square:hover {
   box-shadow: 8px 10px 1px rgb(232, 63, 33);
 }
 .menu_items .menu_squares .square_1 {
@@ -288,11 +288,21 @@
 @keyframes fadeRight {
   0% {
     opacity: 0;
-    transform: translateX(-20px);
+    transform: translateX(30px);
   }
   100% {
     opacity: 1;
     transform: translateX(0);
+  }
+}
+@keyframes slideTop_menu_items {
+  0% {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 @keyframes merge {
@@ -344,7 +354,7 @@
 @keyframes fadeLeft {
   0% {
     opacity: 0;
-    transform: translateX(30px);
+    transform: translateX(-30px);
   }
   100% {
     opacity: 1;
@@ -635,7 +645,7 @@
   align-items: center;
   display: none;
   flex-direction: column;
-  margin: 10px 0;
+  margin: 0 0;
   width: 100%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
@@ -650,6 +660,7 @@
 .project_section .project_header .project_title {
   color: #b52323;
   font-size: 2em;
+  animation: fadeLeft 0.5s ease-in-out;
 }
 .project_section .project_header .project_image_logo {
   width: 20px;
@@ -657,6 +668,7 @@
   cursor: pointer;
   transition: all 0.2s ease;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  animation: fadeIn 0.5s ease-in-out;
 }
 .project_section .project_header .project_image_logo:hover {
   transform: scale(1.1);
@@ -668,7 +680,6 @@
   flex-wrap: wrap;
   border: 1px solid #000;
   border-radius: 20px;
-  padding: 1%;
   width: 80%;
 }
 .project_section .project_items .bi-arrow-right {
@@ -676,10 +687,11 @@
   position: absolute;
   cursor: pointer;
   font-size: 2em;
-  top: 8.8%;
-  left: 73.8%;
+  top: 11%;
+  right: 22%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .project_section .project_items .bi-arrow-right:hover {
   transform: translateX(5px);
@@ -695,14 +707,16 @@
   box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
 }
 .project_section .project_items .large_image {
-  margin: 1%;
+  margin: 0.8%;
   width: 413px;
   height: 215px;
+  animation: fadeLeft 0.9s ease-in-out;
 }
 .project_section .project_items .small_image {
-  margin: 1%;
+  margin: 0.8%;
   width: 215px;
   height: 214px;
+  animation: fadeRight 0.9s ease-in-out;
 }
 
 .about_section {
@@ -710,14 +724,14 @@
   align-items: center;
   display: none;
   flex-direction: column;
-  margin: 1% 0;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
 .about_section .about_menu {
   display: flex;
   justify-content: flex-end;
-  width: 40%;
-  margin: 1%;
+  align-items: center;
+  width: 50%;
+  animation: fadeIn 0.5s ease-in-out;
 }
 .about_section .about_menu .about_image_logo {
   width: 20px;
@@ -742,17 +756,18 @@
   padding: 2px;
   text-shadow: 1px 1px 3px lightgoldenrodyellow;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
-  top: 13%;
-  left: 44%;
+  top: 14%;
+  left: 42%;
   animation: symbol_glitch 0.5s ease-out;
   animation-delay: 1s;
 }
 .about_section .user_profile_about .img_profile_about {
   border: 1px solid #000;
   border-radius: 10px;
-  width: 300px;
-  height: 400px;
+  width: 280px;
+  height: 375px;
   box-shadow: 8px 10px 1px rgb(228, 167, 156);
+  animation: fadeLeft 0.5s ease-in-out;
 }
 .about_section .about_container {
   display: flex;
@@ -774,9 +789,10 @@
   color: #fff;
   border: 1px solid #fff;
   background-color: #b52323;
-  top: 16%;
+  top: 17%;
   right: 22%;
   transition: all 0.8s ease;
+  animation: fadeRight 1.5s ease-in-out;
 }
 .about_section .about_container .education_button:hover {
   transform: scale(1.1);
@@ -792,6 +808,7 @@
 }
 .about_section .about_container .about_information_container .about_text {
   margin: 1em 2em;
+  animation: fadeRight 1s ease-in-out;
 }
 .about_section .about_container .skills_title {
   font-size: 30px;
@@ -805,12 +822,12 @@
   margin: 1em 1em;
 }
 .about_section .about_container .skills_container p {
-  cursor: pointer;
   border: 1px solid #000;
   border-radius: 10px;
   padding: 1%;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease-out;
+  animation: fadeInFooter 1s ease-in-out;
 }
 .about_section .about_container .skills_container :hover {
   box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.7);
