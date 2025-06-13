@@ -230,7 +230,7 @@
     }
 }
 
-.project_section {
+.projects_section {
     @include display_flex_center;
     display: none;
     flex-direction: column;
@@ -238,7 +238,7 @@
     width: 100%;
     text-shadow: $shadowBox;
 
-    & .project_header { // Formatação do cabeçalho da seção de projetos
+    & .projects_header { // Formatação do cabeçalho da seção de projetos
         @include display_flex_center;
         display: flex;
         justify-content: space-around;
@@ -246,20 +246,20 @@
         width: 80%;
         
 
-        & .project_title {
+        & .projects_title {
             color: #b52323;
             font-size: 2em;
             animation: fadeLeft 0.5s ease-in-out;
         }
 
-        & .project_image_logo {
+        & .projects_image_logo {
             @include image_logo;
             animation: fadeIn 0.5s ease-in-out;
         } 
 
     }
 
-    & .project_items { // Formatação da seção de projetos
+    & .projects_items { // Formatação da seção de projetos
         @include display_flex_center;
         display: flex;
         flex-wrap: wrap;
@@ -283,7 +283,7 @@
             }
         }
 
-        & .project_image {
+        & .projects_image {
             border: $borderBlack;
             border-radius: 10px;
             box-shadow: $shadowBox;

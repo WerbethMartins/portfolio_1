@@ -640,7 +640,7 @@
   height: 300px;
 }
 
-.project_section {
+.projects_section {
   justify-content: center;
   align-items: center;
   display: none;
@@ -649,7 +649,7 @@
   width: 100%;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-.project_section .project_header {
+.projects_section .projects_header {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -657,12 +657,12 @@
   align-items: center;
   width: 80%;
 }
-.project_section .project_header .project_title {
+.projects_section .projects_header .projects_title {
   color: #b52323;
   font-size: 2em;
   animation: fadeLeft 0.5s ease-in-out;
 }
-.project_section .project_header .project_image_logo {
+.projects_section .projects_header .projects_image_logo {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -670,10 +670,10 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   animation: fadeIn 0.5s ease-in-out;
 }
-.project_section .project_header .project_image_logo:hover {
+.projects_section .projects_header .projects_image_logo:hover {
   transform: scale(1.1);
 }
-.project_section .project_items {
+.projects_section .projects_items {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -682,7 +682,7 @@
   border-radius: 20px;
   width: 80%;
 }
-.project_section .project_items .bi-arrow-right {
+.projects_section .projects_items .bi-arrow-right {
   z-index: 2;
   position: absolute;
   cursor: pointer;
@@ -693,26 +693,26 @@
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease-in-out;
 }
-.project_section .project_items .bi-arrow-right:hover {
+.projects_section .projects_items .bi-arrow-right:hover {
   transform: translateX(5px);
 }
-.project_section .project_items .project_image {
+.projects_section .projects_items .projects_image {
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease;
 }
-.project_section .project_items .project_image:hover {
+.projects_section .projects_items .projects_image:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
 }
-.project_section .project_items .large_image {
+.projects_section .projects_items .large_image {
   margin: 0.8%;
   width: 413px;
   height: 215px;
   animation: fadeLeft 0.9s ease-in-out;
 }
-.project_section .project_items .small_image {
+.projects_section .projects_items .small_image {
   margin: 0.8%;
   width: 215px;
   height: 214px;
