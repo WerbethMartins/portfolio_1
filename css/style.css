@@ -662,7 +662,7 @@
   font-size: 2em;
   animation: fadeLeft 0.5s ease-in-out;
 }
-.projects_section .projects_header .projects_image_logo {
+.projects_section .projects_header .image_project_logo {
   width: 20px;
   height: 20px;
   cursor: pointer;
@@ -670,10 +670,10 @@
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   animation: fadeIn 0.5s ease-in-out;
 }
-.projects_section .projects_header .projects_image_logo:hover {
+.projects_section .projects_header .image_project_logo:hover {
   transform: scale(1.1);
 }
-.projects_section .projects_items {
+.projects_section .items_projects {
   justify-content: center;
   align-items: center;
   display: flex;
@@ -682,7 +682,7 @@
   border-radius: 20px;
   width: 80%;
 }
-.projects_section .projects_items .bi-arrow-right {
+.projects_section .items_projects .bi-arrow-right {
   z-index: 2;
   position: absolute;
   cursor: pointer;
@@ -693,30 +693,59 @@
   transition: all 0.3s ease;
   animation: fadeIn 0.5s ease-in-out;
 }
-.projects_section .projects_items .bi-arrow-right:hover {
+.projects_section .items_projects .bi-arrow-right:hover {
   transform: translateX(5px);
 }
-.projects_section .projects_items .projects_image {
+.projects_section .items_projects .section_projects_image {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  width: 80%;
+}
+.projects_section .items_projects .section_projects_image .projects_image {
   border: 1px solid #000;
   border-radius: 10px;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
   transition: all 0.3s ease;
 }
-.projects_section .projects_items .projects_image:hover {
+.projects_section .items_projects .section_projects_image .projects_image:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
 }
-.projects_section .projects_items .large_image {
+.projects_section .items_projects .large_image {
   margin: 0.8%;
   width: 413px;
   height: 215px;
   animation: fadeLeft 0.9s ease-in-out;
 }
-.projects_section .projects_items .small_image {
+.projects_section .items_projects .small_image {
   margin: 0.8%;
   width: 215px;
   height: 214px;
   animation: fadeRight 0.9s ease-in-out;
+}
+.projects_section .items_projects .section_projects_image_2 {
+  justify-content: center;
+  align-items: center;
+  display: none;
+  flex-wrap: wrap;
+  border-radius: 20px;
+  width: 80%;
+}
+.projects_section .items_projects .section_projects_image_2 .projects_image_2 {
+  border: 1px solid #000;
+  border-radius: 10px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.projects_section .items_projects .section_projects_image_2 .projects_image_2:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
+}
+.projects_section .section_projects.active {
+  display: flex;
 }
 
 .about_section {

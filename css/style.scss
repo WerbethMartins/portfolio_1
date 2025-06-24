@@ -240,7 +240,7 @@
 
     & .projects_header { // Formatação do cabeçalho da seção de projetos
         @include display_flex_center;
-        display: flex;
+        display: $display_flex;
         justify-content: space-around;
         align-items: $alignItems;
         width: 80%;
@@ -252,16 +252,16 @@
             animation: fadeLeft 0.5s ease-in-out;
         }
 
-        & .projects_image_logo {
+        & .image_project_logo {
             @include image_logo;
             animation: fadeIn 0.5s ease-in-out;
         } 
 
     }
 
-    & .projects_items { // Formatação da seção de projetos
+    & .items_projects{ // Formatação da seção de projetos
         @include display_flex_center;
-        display: flex;
+        display: $display_flex;
         flex-wrap: wrap;
         border: $borderBlack;
         border-radius: 20px;
@@ -283,15 +283,23 @@
             }
         }
 
-        & .projects_image {
+        & .section_projects_image{
+            @include display_flex_center;
+            display: $display_flex;
+            flex-wrap: wrap;
+            border-radius: 20px;
+            width: 80%;
+
+            & .projects_image {
             border: $borderBlack;
             border-radius: 10px;
             box-shadow: $shadowBox;
             transition: all 0.3s ease;
 
-            &:hover {
-                transform: scale(1.05);
-                box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
+                }
             }
         }
         
@@ -308,6 +316,32 @@
             height: 214px;
             animation: fadeRight 0.9s ease-in-out;
         }
+
+        & .section_projects_image_2 {
+            @include display_flex_center;
+            display: none;
+            flex-wrap: wrap;
+            border-radius: 20px;
+            width: 80%;
+
+            & .projects_image_2 {
+            border: $borderBlack;
+            border-radius: 10px;
+            box-shadow: $shadowBox;
+            transition: all 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                    box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
+                }
+            }
+        }
+
+    }
+
+    // Classe para alterar a visibilidade 
+    .section_projects.active{
+        display: $display_flex;
     }
 
 }

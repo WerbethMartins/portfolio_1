@@ -29,6 +29,10 @@ function contactButton(){
 
 }
 
+
+// Configuração do botão de projetos e botões dentro da seção de projetos
+
+// Botão de projetos na seção principal
 function projectsButton(){
     $('#projects_button').on('click', () => {
          $('.projects_button').css({
@@ -41,6 +45,19 @@ function projectsButton(){
         },500);
     });
 }
+
+// Seta para passar paras proximas imagens
+$('#next_images').on('click', () => {
+    const currentImage = $('.section_projects_image'); // Seleciona a imagem atual
+    const nextImage = currentImage.next('.section_projects_image_2'); // Seleciona a próxima imagem se existir
+
+    if(currentImage.length && nextImage.length){
+        currentImage.removeClass('section_projects.active').fadeOut(500, () => {
+            nextImage.addClass('section_projects.active').fadeIn(500);
+        });
+    }
+});
+
 
 export function initializeNavigation(){
 
