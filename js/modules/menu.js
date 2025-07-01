@@ -11,7 +11,7 @@ export function toggleVisibility(sectionToShow, sectionToHide) {
 
 // Função para alternar a visibilidade das seções
 function openSection(sectionToShow) {
-    const sections = ['#menu_items', '#main_section', '#contact_section', '#projects_section', '#about_section'];
+    const sections = [ '#contact_section', '#projects_section', '#about_section', '#education_section'];
     
     sections.forEach(section => {
         if (section === sectionToShow) {
@@ -26,14 +26,8 @@ function openSection(sectionToShow) {
 function menuItems(){
     // Evento de clique no icone do menu
     $('#menu_icon').on('click', () => {
-        $('#menu_icon').css({
-            "transition": 'all 2s cubic-bezier(0.4,0,0.2,1)',
-            "transform": 'translateY(-20px)',
-        }); 
         setTimeout(() => {
-            openSection('#menu_items'); // Chama a função para abrir o menu
-            $('.navbar').hide();
-            $('#footer').hide();
+            $('#menu_items_container').show();
         }, 500);
     });
 
@@ -107,7 +101,6 @@ function iconProjectMenu(){
     });
 }
 
-
 function iconAboutMenu() {
     // Função para abrir o menu da seção sobre
     $('#about_menu_icon').on('click', () => {
@@ -116,12 +109,28 @@ function iconAboutMenu() {
             $('.navbar').hide();
             $('#footer').hide();
         },500);
-        $('.square_projects').css({
+        $('.square_about').css({
             "transition": 'all 2s ease-out',
             "opacity": '1',
             "transform": 'translateY(0)',
         })
     })
+}
+
+function iconEducationMenu(){
+    // Função para abrir o meu da seção educação
+    $('#education_menu_icon').on('click', () => {
+        setTimeout(() => {
+            openSection('#menu_items');
+            $('#navbar').hide();
+            $('#footer').hide();
+        }, 500);
+        $('.square_about').css({
+            "transition": 'all 2s ease-out',
+            "opacity": '1',
+            "transform": 'translateY(0)',
+        })
+    });
 }
 
 // Função para de clique no icon do menu da seção contato
@@ -134,6 +143,7 @@ function iconContactMenu(){
         }, 500);
         $('.square_contact').css({
             "transition": 'all 2s ease-out',
+            "opacity": '1',
             "transform": 'translateY(0px)',
         });
     });
@@ -144,4 +154,5 @@ export function initializeMenu() {
         iconContactMenu();
         iconAboutMenu();
         iconProjectMenu();
+        iconEducationMenu();
 }

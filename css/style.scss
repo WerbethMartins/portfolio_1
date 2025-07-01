@@ -10,12 +10,19 @@
     box-sizing: border-box;
 }
 
-/* Formatação do menu */
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
+li {
+    list-style: none;
+}
+
+/* Formatação do menu */
 .nav_header {
+    @include display_flex_center;
     display: $display_flex;
-    justify-content: $justify_content_center;
-    align-items: $alignItems;
     padding: 1%;
     animation: fadeIn 0.5s ease-in-out;
 
@@ -36,6 +43,71 @@
             } 
         }
 
+        & .menu_items_container {
+            display: none;
+
+            & .menu_items_teste {
+            position: absolute;
+            flex-direction: column;
+            display: $display_flex;
+            justify-content: flex-start;
+            align-items: $alignItems;
+            padding: 5px;
+            margin: 5px 0;
+            top: 1%;
+            left: 75%;
+            width: 5%;
+            text-shadow: $shadowBox;
+
+            & .menu_circle {
+                cursor: pointer;
+                display: $display_flex;
+                justify-content: $justify_content_center;
+                align-items: $alignItems;
+                border: $borderBlack;
+                border-radius: 50%;
+                background-size: cover; // Cobrindo todo o quadrado 
+                background-position: center;
+                margin: 5px 0;
+                width: 30px;
+                height: 30px;
+                box-shadow: $shadowBox;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.813);
+                }
+            }
+
+            & .circle_1 {
+                transform: translateY(-15px);
+                background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
+            }
+
+            & .circle_2 {
+                transform: translate(5px, -15px);
+                background-image: url('/imagem/contato.jpg');
+            }
+
+            & .circle_3 {
+                transform: translate(-5px, -15px);
+                background-image: url('/imagem/sobre.jpg');
+            }
+            
+            & .menu_links {
+                opacity: 0;
+                padding: 0 15px;
+                transform: translate(15px, 0px);
+                transition: all 0.3s ease;
+            }
+
+            & .menu_links:hover {
+                opacity: 1;
+                border-bottom: $borderBlack;
+                transform: translate(45px, 0);
+            }
+        }
+        }
     }    
 }
 
@@ -283,6 +355,23 @@
             }
         }
 
+        & .bi-arrow-left {
+            z-index: 2;
+            position: absolute;
+            display: none;
+            cursor: pointer;
+            font-size: 2em;
+            top: 11%;
+            left: 22%;
+            text-shadow: $shadowBox;
+            transition: all 0.3s ease;
+            animation: fadeRight 0.5s ease-in-out;
+
+            &:hover {
+                transform: translateX(-5px);
+            }
+        }
+
         & .section_projects_image{
             @include display_flex_center;
             display: $display_flex;
@@ -337,11 +426,6 @@
             }
         }
 
-    }
-
-    // Classe para alterar a visibilidade 
-    .section_projects.active{
-        display: $display_flex;
     }
 
 }
@@ -487,7 +571,7 @@
                 border: $borderBlack;
                 border-radius: $borderRadius;
                 width: 300px;
-                height: 453px;
+                height: 435px;
                 box-shadow:  8px 10px 1px rgb(228, 167, 156);
             }
         }

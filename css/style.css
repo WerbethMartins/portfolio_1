@@ -378,11 +378,20 @@
   box-sizing: border-box;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
+}
+
 /* Formatação do menu */
 .nav_header {
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
   padding: 1%;
   animation: fadeIn 0.5s ease-in-out;
 }
@@ -407,6 +416,63 @@
 }
 .nav_header .navbar .menu_icon .main_img_logo:hover {
   transform: scale(1.1);
+}
+.nav_header .navbar .menu_items_container {
+  display: none;
+}
+.nav_header .navbar .menu_items_container .menu_items_teste {
+  position: absolute;
+  flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+  margin: 5px 0;
+  top: 1%;
+  left: 75%;
+  width: 5%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .menu_circle {
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #000;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  margin: 5px 0;
+  width: 30px;
+  height: 30px;
+  box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .menu_circle:hover {
+  box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.813);
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .circle_1 {
+  transform: translateY(-15px);
+  background-image: url("/imagem/estacao-de-trabalho-com-laptop.jpg");
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .circle_2 {
+  transform: translate(5px, -15px);
+  background-image: url("/imagem/contato.jpg");
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .circle_3 {
+  transform: translate(-5px, -15px);
+  background-image: url("/imagem/sobre.jpg");
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .menu_links {
+  opacity: 0;
+  padding: 0 15px;
+  transform: translate(15px, 0px);
+  transition: all 0.3s ease;
+}
+.nav_header .navbar .menu_items_container .menu_items_teste .menu_links:hover {
+  opacity: 1;
+  border-bottom: 1px solid #000;
+  transform: translate(45px, 0);
 }
 
 .main_section {
@@ -696,6 +762,21 @@
 .projects_section .items_projects .bi-arrow-right:hover {
   transform: translateX(5px);
 }
+.projects_section .items_projects .bi-arrow-left {
+  z-index: 2;
+  position: absolute;
+  display: none;
+  cursor: pointer;
+  font-size: 2em;
+  top: 11%;
+  left: 22%;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease;
+  animation: fadeRight 0.5s ease-in-out;
+}
+.projects_section .items_projects .bi-arrow-left:hover {
+  transform: translateX(-5px);
+}
 .projects_section .items_projects .section_projects_image {
   justify-content: center;
   align-items: center;
@@ -743,9 +824,6 @@
 .projects_section .items_projects .section_projects_image_2 .projects_image_2:hover {
   transform: scale(1.05);
   box-shadow: 0 4px 8px rgba(201, 17, 17, 0.491);
-}
-.projects_section .section_projects.active {
-  display: flex;
 }
 
 .about_section {
@@ -903,7 +981,7 @@
   border: 1px solid #000;
   border-radius: 10px;
   width: 300px;
-  height: 453px;
+  height: 435px;
   box-shadow: 8px 10px 1px rgb(228, 167, 156);
 }
 .education_section .education_container .education_information_container {
