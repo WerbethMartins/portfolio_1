@@ -1,5 +1,21 @@
 import {toggleVisibility as toggleVisibility2} from './menu.js';
 
+// Função debounce para otimizar performance
+function debounce(func, wait, immediate) {
+    let timeout;
+    return function(...args) {
+        const context = this;
+        const later = function () {
+            timeout = null;
+            if (!immediate) func.apply(context, args);
+        };
+        const callNow = immediate && !timeout;
+        clearTimeout(timeout);
+        timeout = setTimeout(later, wait);
+        if (callNow) func.apply(context, args);
+    };
+}
+
 //Função para alternar a visibilidades das sections
 export function openSection(sectionToShow){
     const sections = ['#contact_section', '#projects_section', '#education_section', '#about_section'];
@@ -36,7 +52,6 @@ function projectsButton(){
     $('#projects_button').on('click', () => {
          $('.projects_button').css({
             'box-shadow': '1px 1px 3px rgba(244, 37, 37, 0.7)',
-            
         })
 
         setTimeout(() => {
@@ -53,6 +68,7 @@ function setArrowButtons() {
         const previousArrow = $('#previous_images');
         const currentImage = $('.section_projects_image'); // Seleciona a imagem atual
         const nextImage = currentImage.next('.section_projects_image_2');
+        
         if(currentImage.length && nextImage.length){
             currentImage.removeClass('section_projects.active').fadeOut(500, () => {
                 previousArrow.css({

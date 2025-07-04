@@ -18,95 +18,75 @@
     width: 100%;
 }
 
-// Classe para animação dos itens do menu
-
-
 // Configurações do menu
-.menu_items {
-    display: none;
-    justify-content: $justify_content_center;
-    align-items: $alignItems;
-    width: 100%;
 
-    & .user_profile_menu {
+.menu_items_container {
+    display: none;
+
+    & .menu_items_list {
+    position: absolute;
+    flex-direction: column;
+    display: $display_flex;
+    justify-content: flex-start;
+    align-items: $alignItems;
+    padding: 5px;
+    margin: 5px 0;
+    top: 1%;
+    left: 75%;
+    width: 5%;
+    text-shadow: $shadowBox;
+    animation: fadeLeft 0.5s ease-in-out;
+
+    & .menu_circle {
+        cursor: pointer;
         display: $display_flex;
         justify-content: $justify_content_center;
         align-items: $alignItems;
-        width: 20%;
-        animation: merge 2s ease-in-out;
+        border: $borderBlack;
+        border-radius: 50%;
+        background-size: cover; // Cobrindo todo o quadrado 
+        background-position: center;
+        margin: 5px 0;
+        width: 30px;
+        height: 30px;
+        box-shadow: $shadowBox;
+        transition: all 0.3s ease;
 
-        & .profile_symbol {
-            @include profile_symbol();
-            left: 26em;
-            bottom: 25em;
-            animation: $symbol_animation;
-            animation-delay: $delay_animation;
+        &:hover {
+            box-shadow: 1px 1px 3px rgba(236, 57, 57, 0.813);
         }
-        & .img_profile  {
-            @include img_profile();
-            left: 14em;
-            bottom: 9em;
-            width: 220px;
-            height: 280px;
-        }
-        & .square_profile {
-            @include square_profile();
-            left: 15em;
-            top: 9em;
-            width: 220px;
-            height: 280px;
-        }   
     }
 
-    & .menu_squares {
-        display: $display_flex;
-        justify-content: $justify_content_center;
-        flex-wrap: wrap;
-        padding: 10px 0;
-        width: 50%;
-        text-shadow: $shadowBox;
-
-        & .img_menu_items {
-            @include img_menu_items();
-        } 
-        & .border_top {
-            border-top: $borderBlack;
-            width: 100%;
-            margin: 0 0 2% 0;
-            animation: $border_menu_item;
-        }
-        & .border_bottom {
-            border-bottom: $borderBlack;
-            width: 100%;
-            margin: 2% 0 0 0;
-            animation: $border_menu_item;
-        }
-        & .square {
-            @include square();
-            margin: 2%;
-            animation: fadeRight 3s ease-in-out;
-
-            & .square_button {
-                @include square_button();
-            } & :hover {
-                background-color: #f0f0f0;
-                transform: scale(1.1);
-            }
-            
-        } .square:hover {
-                box-shadow: 8px 10px 1px rgb(232, 63, 33);
-            }
-        & .square_1 {
+        & .circle_1 {
+            transform: translateY(-15px);
             background-image: url('/imagem/estacao-de-trabalho-com-laptop.jpg');
+            animation: merge 0.8s ease-in-out;
         }
-        & .square_2 {
+
+        & .circle_2 {
+            transform: translate(5px, -15px);
             background-image: url('/imagem/contato.jpg');
         }
-        & .square_3 {
+
+        & .circle_3 {
+            transform: translate(-5px, -15px);
             background-image: url('/imagem/sobre.jpg');
+            animation: merge 1.5s ease-in-out;
         }
-        & .square_4 {
-            background-image: url('/imagem/home.jpg');
+        
+        & .menu_links {
+            opacity: 0;
+            padding: 0 15px;
+            transform: translate(15px, 0px);
+            transition: all 0.3s ease;
+        }
+
+        & .menu_links:hover {
+            opacity: 1;
+            color: #fff;
+            border: $borderBlack;
+            background-color: #000000;
+            transform: translate(45px, 0);
         }
     }
 }

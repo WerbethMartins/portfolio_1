@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "compile": "sass style.scss style.css",
+    "compile": "sass src/style.scss dist/style.css",
     "watch": "sass --watch style.scss style.css"
   },
   "author": "",
