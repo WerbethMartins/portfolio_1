@@ -39,6 +39,7 @@
 
     & .menu_circle {
         cursor: pointer;
+        position: relative;
         display: $display_flex;
         justify-content: $justify_content_center;
         align-items: $alignItems;
@@ -73,20 +74,22 @@
             background-image: url('/imagem/sobre.jpg');
             animation: merge 1.5s ease-in-out;
         }
-        
+
         & .menu_links {
-            opacity: 0;
+            display: none;
+            position: absolute;
             padding: 0 15px;
             transform: translate(15px, 0px);
             transition: all 0.3s ease;
         }
 
-        & .menu_links:hover {
-            opacity: 1;
+        & .menu_circle:hover a.menu_links {
+            display: block; /* Mostra quando o nav é "hoverado" */
             color: #fff;
             border: $borderBlack;
             background-color: #000000;
             transform: translate(45px, 0);
         }
+        
     }
 }

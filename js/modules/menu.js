@@ -160,17 +160,19 @@ function iconEducationMenu(){
 
 // Função para de clique no icon do menu da seção contato
 function iconContactMenu(){
-    $('#contact_menu_icon').on('click', () => {
+    const icon = $('#contact_menu_icon');
+    const navbar = $('.navbar');
+    const contactButton = $('.contact_button');
+
+    $(icon).on('click', () => {
         setTimeout(() => {
-            openSection('#menu_items'); // Chama a função para abrir o menu
-            $('.navbar').hide();
-            $('#footer').hide();
+            openSection('#main_section');
+            $(navbar).show();
         }, 500);
-        $('.square_contact').css({
-            "transition": 'all 2s ease-out',
-            "opacity": '1',
-            "transform": 'translateY(0px)',
-        });
+
+        $(contactButton).css({
+            'box-shadow': '1px 1px 3px rgba(0, 0, 0, 0.7)',
+        })
     });
 }
 

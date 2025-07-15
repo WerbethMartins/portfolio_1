@@ -34,6 +34,7 @@
 }
 .menu_items_container .menu_items_list .menu_circle {
   cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -65,13 +66,14 @@
   animation: merge 1.5s ease-in-out;
 }
 .menu_items_container .menu_items_list .menu_links {
-  opacity: 0;
+  display: none;
+  position: absolute;
   padding: 0 15px;
   transform: translate(15px, 0px);
   transition: all 0.3s ease;
 }
-.menu_items_container .menu_items_list .menu_links:hover {
-  opacity: 1;
+.menu_items_container .menu_items_list .menu_circle:hover a.menu_links {
+  display: block; /* Mostra quando o nav é "hoverado" */
   color: #fff;
   border: 1px solid #000;
   background-color: #000000;
@@ -113,6 +115,7 @@
 }
 .menu_items_container .menu_items_list .menu_circle {
   cursor: pointer;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -144,13 +147,14 @@
   animation: merge 1.5s ease-in-out;
 }
 .menu_items_container .menu_items_list .menu_links {
-  opacity: 0;
+  display: none;
+  position: absolute;
   padding: 0 15px;
   transform: translate(15px, 0px);
   transition: all 0.3s ease;
 }
-.menu_items_container .menu_items_list .menu_links:hover {
-  opacity: 1;
+.menu_items_container .menu_items_list .menu_circle:hover a.menu_links {
+  display: block; /* Mostra quando o nav é "hoverado" */
   color: #fff;
   border: 1px solid #000;
   background-color: #000000;

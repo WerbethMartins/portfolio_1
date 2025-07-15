@@ -40,10 +40,9 @@ function contactButton(){
         setTimeout(() => {
             openSection('#contact_section');
             $('#main_section').hide();
-            $('#header').hide();
+            $('.navbar').hide();
         }, 500);
     });
-
 }
 '   '
 // Configuração do botão de projetos e botões dentro da seção de projetos
